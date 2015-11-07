@@ -8,16 +8,16 @@ public:
     return my_list.empty();
   }
 
-  T& top() const {
+  int size() const {
+    return my_list.size();
+  }
+
+  T const& top() const {
     if (!empty()) {
       return my_list.front();
     } else {
-      std::cerr << "Error: top() cannot return on empty Stack.";
+      std::cerr << "Error: top() cannot return on empty Stack." << std::endl;
     }
-  }
-
-  int size() const {
-    return my_list.size();
   }
 
   void push(const T& value) {
