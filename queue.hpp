@@ -12,31 +12,19 @@ public:
   }
 
   T const& front() const {
-    if (!empty()) {
-      return my_list.front();
-    } else {
-      std::cerr << "Error: front() cannot return on empty Queue." << std::endl;
-    }
+    return my_list.front();
   }
 
   T const& back() const {
-    if (!empty()) {
-      return my_list.back();
-    } else {
-      std::cerr << "Error: back() cannot return on empty Queue." << std::endl;
-    }
+    return my_list.back();
   }
 
   void push(const T& value) {
-    my_list.push_front(value);
+    my_list.push_back(value);
   }
 
   void pop() {
-    if (!empty()) {
-      my_list.pop_back();
-    } else {
-      std::cerr << "Error: Cannot pop on empty Queue." << std::endl;
-    }
+    my_list.pop_front();
   }
 
 private:

@@ -13,11 +13,7 @@ public:
   }
 
   T const& top() const {
-    if (!empty()) {
-      return my_list.front();
-    } else {
-      std::cerr << "Error: top() cannot return on empty Stack." << std::endl;
-    }
+    return my_list.front();
   }
 
   void push(const T& value) {
@@ -25,11 +21,7 @@ public:
   }
 
   void pop() {
-    if (!empty()) {
-      my_list.pop_front();
-    } else {
-      std::cerr << "Error: Cannot pop on empty Stack.";
-    }
+    my_list.pop_front();
   }
 
 private:
